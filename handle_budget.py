@@ -15,7 +15,13 @@
 
 
 def handle_your_budget():
-    
+        budgetDetials = {
+             "Budget": "",
+             "Balance": "",
+             "Expenses":0,
+             "Expenses Title": "",
+             "Spent": ""
+        }
         budget = float(input("Enter Budget Amount: "))
        
         balance = 0
@@ -24,22 +30,30 @@ def handle_your_budget():
             if budget > 0:
                 budgetAmount = budget
                 balance = budgetAmount
+                budgetDetials["Budget"] = budgetAmount
+              
                 break
             else:
                 print("Please enter budget")
 
-        print(budgetAmount)
+        
 
 
         def  handleExpenses():
             expenseTitle = input("Enter expense title: ")
+            budgetDetials["Expenses Title"] = expenseTitle
             expenseAmount = 0
             expenseValue =  float(input(f"Enter the cost of the {expenseTitle}: "))
             while True:
                 if expenseValue > 0 :
                     expenseAmount = expenseValue
-                    balance = budgetAmount - expenseValue
+                    balance = budgetAmount - expenseAmount
+                    budgetDetials["Balance"] = balance
+                    budgetDetials["Spent"] = expenseAmount
+
+
                     print(f"Your balance is {balance}")
+                    print(f"Detials about your Budget: {budgetDetials}")
                     break
                 else:
                     expenseValue =  float(input(f"Oops!, Enter the cost of the {expenseTitle}: "))
@@ -48,6 +62,7 @@ def handle_your_budget():
 
 
         handleExpenses()
+        
 
 handle_your_budget()
 
@@ -55,6 +70,6 @@ handle_your_budget()
 
 count = 0 
 
-while count < 5:
+while count < 1:
      handle_your_budget()
      count += 1
