@@ -14,6 +14,7 @@
 """
 
 
+
 def handle_your_budget():
         budgetDetials = {
              "Budget": "",
@@ -62,11 +63,11 @@ def handle_your_budget():
 
 
         handleExpenses()
-        print(f"Your Bubget is {budgetDetials['Budget']}")
-        print(f"Your Balance is {budgetDetials['Balance']}")
+        print(f"Your Bubget is ${budgetDetials['Budget']}")
+        print(f"Your Balance is ${budgetDetials['Balance']}")
         print(f"Your Expenses Title is {budgetDetials['Expenses Title']}")
-        print(f"Your Expenses Cost is {budgetDetials['Spent']}")
-        print(f"Your Spent {budgetDetials['Spent']}")
+        print(f"Your Expenses Cost is ${budgetDetials['Spent']}")
+        print(f"Your Spent ${budgetDetials['Spent']}")
 
         
 
